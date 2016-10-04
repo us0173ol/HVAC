@@ -55,7 +55,7 @@ public class Furnace extends ServiceCall {
             furnaceTypes = new HashMap<Integer, String>();
             furnaceTypes.put(FORCED_AIR,"Forced Air");
             furnaceTypes.put(BOILER, "Boiler/Radiators");
-            furnaceTypes.put(OCTOPUS,"Gravity Feed (the older 'octopus' style)");
+            furnaceTypes.put(GRAVITY, "Gravity Feed (the older 'octopus' style)");
         }
 
         public static String getTypeString(int typeInt) {
