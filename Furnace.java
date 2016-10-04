@@ -46,7 +46,7 @@ public class Furnace extends ServiceCall {
 
         protected static final int FORCED_AIR = 1;
         protected static final int BOILER = 2;
-        protected static final int OCTOPUS = 3;
+        protected static final int GRAVITY = 3;
 
         static HashMap<Integer, String> furnaceTypes;
 
@@ -54,8 +54,8 @@ public class Furnace extends ServiceCall {
         static {
             furnaceTypes = new HashMap<Integer, String>();
             furnaceTypes.put(FORCED_AIR,"Forced Air");
-            furnaceTypes.put(BOILER,"Boiler/Radiators");
-            furnaceTypes.put(OCTOPUS,"Older 'Octopus' Style");
+            furnaceTypes.put(BOILER, "Boiler/Radiators");
+            furnaceTypes.put(OCTOPUS,"Gravity Feed (the older 'octopus' style)");
         }
 
         public static String getTypeString(int typeInt) {
