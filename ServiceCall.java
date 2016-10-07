@@ -16,14 +16,23 @@ public class ServiceCall {
     
     protected String resolution;
     protected double fee;
+    protected double cityFee;
 
     public ServiceCall(String serviceAddress, String problemDescription, Date date) {
         this.serviceAddress = serviceAddress;
         this.problemDescription = problemDescription;
         this.reportedDate = date;
         this.fee = UNRESOLVED;
+        this.cityFee = UNRESOLVED;
     }
 
+    public double getCityFee() {
+        return cityFee;
+    }
+
+    public void setCityFee(double cityFee) {
+        this.cityFee = cityFee;
+    }
 
     public Date getResolvedDate() {
         return resolvedDate;

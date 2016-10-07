@@ -69,9 +69,12 @@ public class HVAC {
                     String resolution = getStringInput();
                     System.out.println("Enter fee charged to customer");
                     double fee = getPositiveDoubleInput();
+                    double cityFee = 0;
+
 
                     resolvedCall.setResolution(resolution);
                     resolvedCall.setFee(fee);
+                    resolvedCall.setCityFee(cityFee);
                     resolvedCall.setResolvedDate(new Date());  //default resolved date is now
 
                     //Add this call to the list of resolved calls
@@ -147,7 +150,8 @@ public class HVAC {
 
         System.out.println("1. Add service call for furnace");
         System.out.println("2. Add service call for AC unit");
-        System.out.println("3. Quit");
+        System.out.println("3. Add service call for Water Heater");
+        System.out.println("4. Quit");
 
         int choice = getPositiveIntInput();
 
@@ -192,6 +196,19 @@ public class HVAC {
 
             }
             case 3: {
+                System.out.println("Enter address of Water Heater");
+                String address = getStringInput();
+                System.out.println("Enter description of problem");
+                String problem = getStringInput();
+                System.out.println("Enter the age in years of the water heater");
+                int age = getPositiveIntInput();
+
+                WaterHeater wh = new WaterHeater(address, problem, new Date(), age);
+                todayServiceCalls.add(wh);
+                System.out.println("Added the following water heater to list of calls:\n" + wh);
+                break;
+            }
+            case 4: {
                 return;
 
             }
